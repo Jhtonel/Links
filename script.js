@@ -13,7 +13,7 @@ function toggleMode() {
 }
 
 const dynamicText = document.querySelector("#makedby span")
-const words = ["::amor", "::exelência"]
+const words = ["::amor", "::excelência"]
 
 let wordIndex = 0
 let charIndex = 0
@@ -50,7 +50,7 @@ const typeEffect = () => {
       }, 1700)
     }
   }
-  if (currentWord === "::exelência") {
+  if (currentWord === "::excelência") {
     if (charIndex === currentWord.length) {
       setTimeout(function () {
         dynamicText.classList.add("emoji")
