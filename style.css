@@ -13,7 +13,6 @@
   --highlight-border: rgba(255, 255, 255, 0.8);
   --switch-bg-url: url(./assets/moon-stars.svg);
 }
-
 .light {
   --text-color: rgba(0, 0, 0, 1);
   --bg-url: url(./assets/bg-mobile-light.jpg);
@@ -144,14 +143,46 @@ ul li a:hover {
   background: var(--highlight-color);
   border: 1px solid var(--highlight-border);
 }
-
 #makedby {
   text-align: center;
   row-gap: 15px;
+  line-height: 27px;
+}
+#makedby a {
+  text-decoration: none;
+}
+#makedby p span {
+  position: relative;
+  color: var(--text-color);
+}
+#makedby p span::before {
+  content: "";
+  right: -8px;
+  top: 50%;
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  background: var(--text-color);
+  transform: translateY(-45%);
+  animation: blink 0.7s infinite;
+}
+#makedby p span.stop-blinking::before {
+  animation: none;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.ionicon {
+  stroke: var(--text-color);
+  font-size: 24px;
 }
 
 .jose {
-  font-weight: 500;
+  position: relative;
+  font-weight: 550;
   color: var(--jose-color);
-  margin: 10px;
 }
