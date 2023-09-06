@@ -145,8 +145,7 @@ ul li a:hover {
 }
 #makedby {
   text-align: center;
-  row-gap: 15px;
-  line-height: 27px;
+  line-height: 20px;
 }
 #makedby a {
   text-decoration: none;
@@ -169,6 +168,9 @@ ul li a:hover {
 #makedby p span.stop-blinking::before {
   animation: none;
 }
+#makedby p span.emoji::before {
+  display: none;
+}
 
 @keyframes blink {
   50% {
@@ -178,11 +180,13 @@ ul li a:hover {
 
 .ionicon {
   stroke: var(--text-color);
-  font-size: 24px;
+  font-size: 23px;
+  transform: translateY(0);
+  transform: translateX(5px);
+  position: absolute;
 }
 
 .jose {
-  position: relative;
   font-weight: 550;
   color: var(--jose-color);
 }

@@ -13,7 +13,7 @@ function toggleMode() {
 }
 
 const dynamicText = document.querySelector("#makedby span")
-const words = ["amor", "exelência"]
+const words = ["::amor", "::exelência"]
 
 let wordIndex = 0
 let charIndex = 0
@@ -37,25 +37,29 @@ const typeEffect = () => {
     wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex
     setTimeout(typeEffect, 1600)
   }
-  if (currentWord === "amor") {
+  if (currentWord === "::amor") {
     if (charIndex === currentWord.length) {
       setTimeout(function () {
+        dynamicText.classList.add("emoji")
         dynamicText.innerHTML =
           '<ion-icon class="ionicon" name="heart"></ion-icon>'
-      }, 350)
+      }, 400)
       setTimeout(() => {
+        dynamicText.classList.remove("emoji")
         dynamicText.innerHTML = currentWord
       }, 1700)
     }
   }
-  if (currentWord === "exelência") {
+  if (currentWord === "::exelência") {
     if (charIndex === currentWord.length) {
       setTimeout(function () {
+        dynamicText.classList.add("emoji")
         dynamicText.innerHTML =
           '<ion-icon class="ionicon jose" name="glasses"></ion-icon>'
-      }, 350)
+      }, 400)
       setTimeout(() => {
         dynamicText.innerHTML = currentWord
+        dynamicText.classList.remove("emoji")
       }, 1700)
     }
   }
