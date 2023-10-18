@@ -198,7 +198,7 @@ ul li a:hover {
     --bg-url: url(./assets/bg-desktop.jpg);
   }
 
-  .ligth {
+  .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
   }
 }
