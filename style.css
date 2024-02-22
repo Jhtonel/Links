@@ -101,7 +101,7 @@ ul {
   gap: 16px;
 }
 
-ul li a {
+ul li p {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,7 +115,7 @@ ul li a {
   transition: background 0.5s;
 }
 
-ul li a:hover {
+ul li p:hover {
   background: var(--surface-color-hover);
   border: 1px solid var(--text-color);
 }
